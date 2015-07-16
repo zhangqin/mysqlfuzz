@@ -104,6 +104,7 @@ func ( *ScanMysql) ipformat()[]string {
 }
 
 func main() {
+	os.Remove("Result.txt")
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	fmt.Printf("\r\n------------------------------------------------------------------------------\r\n")
 	fmt.Printf(" Welcome to use Mysql crack!                                     qq:1141056911\r\n")
